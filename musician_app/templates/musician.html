@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %}
+
+{% block css_add %}
+<style>
+  body {
+    background-color: rgb(149, 173, 246);
+  }
+</style>
+{% endblock %} {% block main %}
+<h1 class="text-center p-5">This is Musician page</h1>
+
+<div class="div">
+    <form method="post" style="width: 50%; margin: auto;" >
+ {% csrf_token %}
+ {{  data | crispy }}
+
+ <button type="submit" class="btn btn-danger" >Sumbit</button>
+      
+ <br><br>
+    </form>
+
+</div>
+
+
+{% endblock %}
+<br /><br />
