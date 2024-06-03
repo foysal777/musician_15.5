@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from musician_app.models import musicModel
-from album_app.models import albumModel
 from musician_app.forms import modelForm
 from album_app import models
 from musician_app import models
